@@ -8,8 +8,7 @@ com a paleta da coleção de mochilas (rosé, vinho, creme) no lugar do coral/tu
 
 ## Como o index é gerado — NÃO editar o index.html à mão
 
-    node funis/mochilas-croche/_montar.cjs         # index.html
-    node funis/mochilas-croche/_montar-promo.cjs   # promo.html
+    bash funis/mochilas-croche/build.sh   # monta index e promo e minifica as duas
 
 - O `_montar.cjs` pega o CSS e o JS **da página de miçanga**, troca a paleta e junta com o
   corpo próprio em `_corpo.html`. Amostras, provas e bônus são gerados por listas no script.
@@ -67,3 +66,9 @@ para a página em `scripts/moch-capas-assets.sh`.
 
 **O conteúdo dos bônus ainda não existe** — só as capas. Precisa ser produzido antes da
 primeira entrega. O plano Essencial (R$ 10) não leva bônus ("só as receitas").
+
+## Performance (14/09/2026)
+
+O build minifica HTML, CSS e JS inline (html-minifier-terser, sem renomear globais) e põe decoding="async" nas imagens lazy. Os webp foram recomprimidos (compression_level 6) só onde o ganho passou de 8%. Cache dos assets: 30 dias com stale-while-revalidate. Medido em celular emulado no localhost: LCP 0,22 s, CLS 0, 164 KB na primeira carga da index; UTMify, back redirect, carrosséis, popup e zoom conferidos depois da minificação.
+
+**Nunca rode o _montar-promo.cjs depois de minificar a index**: ele lê o CSS das etapas pelos comentários, e a minificação os remove. Use sempre o build.sh.
