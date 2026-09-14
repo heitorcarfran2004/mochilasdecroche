@@ -16,17 +16,17 @@ com a paleta da coleção de mochilas (rosé, vinho, creme) no lugar do coral/tu
 - Correção ou melhoria de CSS/JS feita na micanga chega aqui rodando o script de novo.
 - Texto de seção se edita no `_corpo.html`; lista de amostras, prints e bônus no `_montar.cjs`.
 
-## Antes de subir — obrigatório
+## Wiapy (cadastrado em 14/09/2026)
 
-1. **Checkouts** — 4 links, procurar `TROCAR-CHECKOUT` no `_corpo.html` (3) e no
-   `_montar-promo.cjs` (1): R$ 10 · R$ 25,90 · popup R$ 16,90 · saída R$ 8,90.
-2. **UTMify** — colar o script do dashboard deste produto no `HEAD` do `_montar.cjs` e no
-   `promo.html`. O da micanga não foi copiado: mandaria as vendas para o painel errado.
-3. E-mail de contato e CNPJ no rodapé (`TROCAR@email.com`, `CNPJ TROCAR`).
+- Produto: **50 Projetos de Mochilas em Crochê** (id 6aa7b60c6239131e9490db54), entrega por link: seção "Acesse sua Compra" com dois links para https://ateliedamari.vercel.app/
+- Checkout: id 6aa7b7686239131e9490ef0e, e-mail de suporte validado, entrega e recuperação por WhatsApp ativas, sem orderbump e sem upsell
+  - R$ 10,00 Pacote Básico — https://pay.wiapy.com/e-o2PNUIe9m
+  - R$ 25,90 Pacote Completo — https://pay.wiapy.com/pYw2DaVsqSfq
+  - R$ 16,90 popup de upsell — https://pay.wiapy.com/mlk-f4C6_Hv-
+  - R$ 8,90 página de saída — https://pay.wiapy.com/grWFJBz5UgAE
+- Visual: cronômetro + banner (entregaveis/checkout-mochilas/banner-checkout.jpg) + 3 depoimentos + garantia, igual ao da micanga
 
-Os links de checkout são marcados pela classe `.checkout`, e é ela que a guarda do back
-redirect usa — não o domínio do gateway. Trocar de gateway não desarma a guarda.
-O back redirect vai para `location.origin + '/promo'`, então funciona em qualquer domínio.
+UTMify e back redirect (para https://mochilasdecroche.vercel.app/promo) já instalados. Falta: e-mail de contato e CNPJ no rodapé.
 
 ## Imagens da página
 
