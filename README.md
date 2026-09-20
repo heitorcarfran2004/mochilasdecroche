@@ -27,6 +27,17 @@ com a paleta da coleção de mochilas (rosé, vinho, creme) no lugar do coral/tu
 
 UTMify e back redirect (para https://mochilasdecroche.vercel.app/promo) já instalados. Falta: e-mail de contato e CNPJ no rodapé.
 
+## Upsell (/upsell)
+
+Página de oferta única com VSL, gerada de  pelo 
+(mesma estrutura e mesmo JS; muda paleta, textos, VSL e links). Não editar o  à mão.
+
+- VSL VTurb: player , mídia 
+- Oferta: as 50 videoaulas de mochila no app, De R$ 79,90 por R$ 19,90
+- Botão do Wiapy pelo SDK ; recusar vai para https://ateliedamari.vercel.app/
+- **Pendente:** o checkout do upsell ainda não existe na Wiapy. Até criar,  no
+   aponta para o Pacote Completo. Criar o produto, pegar o link e rodar o script de novo.
+
 ## Imagens da página
 
 Todas vieram prontas da pasta `Downloads/imagens p site` (14/09/2026): `hero.jpeg` (hero),
