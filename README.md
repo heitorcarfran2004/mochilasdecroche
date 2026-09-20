@@ -29,14 +29,18 @@ UTMify e back redirect (para https://mochilasdecroche.vercel.app/promo) já inst
 
 ## Upsell (/upsell)
 
-Página de oferta única com VSL, gerada de  pelo 
-(mesma estrutura e mesmo JS; muda paleta, textos, VSL e links). Não editar o  à mão.
+Página de oferta única com VSL, gerada de `../brincos-micanga/upsell.html` pelo `_montar-upsell.cjs`
+(mesma estrutura e mesmo JS; muda paleta, textos, VSL e links). **Não editar o `upsell.html` à mão.**
 
-- VSL VTurb: player , mídia 
-- Oferta: as 50 videoaulas de mochila no app, De R$ 79,90 por R$ 19,90
-- Botão do Wiapy pelo SDK ; recusar vai para https://ateliedamari.vercel.app/
-- **Pendente:** o checkout do upsell ainda não existe na Wiapy. Até criar,  no
-   aponta para o Pacote Completo. Criar o produto, pegar o link e rodar o script de novo.
+    node funis/mochilas-croche/_montar-upsell.cjs
+
+- VSL VTurb: player `6aafa4f8ae8c2d9f5c423321`, mídia `6aafa4f288ed8308888b9df9`
+- Oferta: as 50 videoaulas de mochila dentro do app, de R$ 79,90 por R$ 19,90
+- Botão do Wiapy pelo SDK `sell/1.0.0/sell.min.js`; recusar vai para https://ateliedamari.vercel.app/
+- **Pendente:** o checkout do upsell ainda não existe na Wiapy — só existe o checkout principal
+  (4 ofertas). Até criar, `LINK_OFERTA` no `_montar-upsell.cjs` aponta para o Pacote Completo.
+  Criar o produto "Mochilas na Prática", pegar o link `pay.wiapy.com/<código>`, trocar a constante
+  e rodar o script de novo. Também falta ligar `upsell_url` no checkout principal para esta página.
 
 ## Imagens da página
 
