@@ -36,7 +36,19 @@ Página de oferta única com VSL, gerada de `../brincos-micanga/upsell.html` pel
 
 - VSL VTurb: player `6aafa4f8ae8c2d9f5c423321`, mídia `6aafa4f288ed8308888b9df9`
 - Oferta: as 50 videoaulas de mochila dentro do app, de R$ 79,90 por R$ 19,90
-- Botão do Wiapy pelo SDK `sell/1.0.0/sell.min.js`; recusar vai para https://ateliedamari.vercel.app/
+- Botão do Wiapy pelo SDK `sell/1.0.0/sell.min.js`; recusar vai para o downsell em `/dows`
+
+## Downsell (/dows)
+
+Gerado de `../brincos-micanga/dows.html` pelo `_montar-dows.cjs`, mesmo padrão do upsell.
+
+    node funis/mochilas-croche/_montar-dows.cjs
+
+- A mesma VSL do upsell entra no lugar da foto da oferta (o Heitor pediu o bloco do head aqui também)
+- O trilho de gráficos vira o trilho das receitas (`assets/amostras`), com o selo "AULA"
+- A prova social são os prints de conversa do funil (`assets/depoimentos`), não depoimento com foto de rosto
+- Oferta: de R$ 19,90 por R$ 9,90; recusar (e o "Não, eu assumo o risco" do modal) vai para https://ateliedamari.vercel.app/
+- **Pendente:** mesmo caso do upsell — sem checkout próprio, `LINK_OFERTA` aponta para o Pacote Completo 50% OFF
 - **Pendente:** o checkout do upsell ainda não existe na Wiapy — só existe o checkout principal
   (4 ofertas). Até criar, `LINK_OFERTA` no `_montar-upsell.cjs` aponta para o Pacote Completo.
   Criar o produto "Mochilas na Prática", pegar o link `pay.wiapy.com/<código>`, trocar a constante

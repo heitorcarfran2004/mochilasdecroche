@@ -298,11 +298,11 @@ img{display:block; max-width:100%}
      põe na URL ao mandar a compradora para cá e cobra no mesmo cartão, sem novo checkout.
      Como o script é async, ELE AINDA NÃO EXISTE quando este trecho roda — por isso a
      espera abaixo. Sem ela a página cai direto no link de reserva e perde o 1 clique.
-     Recusar leva para a area de membros: o produto comprado ja esta la. -->
+     Recusar leva para o downsell (/dows). -->
 <script>
 (function () {
   var ACEITE = "https://pay.wiapy.com/pYw2DaVsqSfq";
-  var RECUSA = "https://ateliedamari.vercel.app/";
+  var RECUSA = "https://mochilasdecroche.vercel.app/dows";
   var caixa = document.getElementById('wiapy_upsell');
 
   function desenhar() {

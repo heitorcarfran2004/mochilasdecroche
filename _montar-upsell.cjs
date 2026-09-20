@@ -12,8 +12,8 @@ const AQUI = __dirname;
 // Troque aqui quando o checkout do upsell for criado na Wiapy. Até lá, o botão
 // aponta para o checkout do Pacote Completo, que existe e carrega.
 const LINK_OFERTA = 'https://pay.wiapy.com/pYw2DaVsqSfq';
-// Recusar leva para a entrega — o produto já comprado está lá.
-const LINK_RECUSA = 'https://ateliedamari.vercel.app/';
+// Recusar leva para o downsell (/dows), que é a próxima oferta do funil.
+const LINK_RECUSA = 'https://mochilasdecroche.vercel.app/dows';
 const PRECO_DE = 'R$ 79,90';
 const PRECO_POR = 'R$ 19,90';
 
@@ -79,7 +79,7 @@ troca(new RegExp('https://pay\\.wiapy\\.com/checkout/6aa1e01db0c1c48195cf0ef8', 
 troca(/https?:\/\/micangasdajuh\.vercel\.app\/dows/g, LINK_RECUSA);
 troca(/SIM, EU QUERO A OFERTA/g, 'SIM, EU ACEITO ESSA OFERTA');
 troca(/Eu não quero a oferta/g, 'Recusar esta oferta');
-troca(/A recusa vai para o downsell \(\/dows\)\./, 'Recusar leva para a area de membros: o produto comprado ja esta la.');
+troca(/A recusa vai para o downsell \(\/dows\)\./, 'Recusar leva para o downsell (/dows).');
 
 // ── garantia e rodapé ───────────────────────────────────────────────────────
 troca('Miçangas da Juh · todos os direitos reservados', 'Coleção Mochilas em Crochê · todos os direitos reservados');
